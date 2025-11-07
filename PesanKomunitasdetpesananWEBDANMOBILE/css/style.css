@@ -1,0 +1,1907 @@
+body {
+  font-family: Host Grotesk;
+  background-color: #DFF2EB;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400px;
+}
+
+.profile-wrapper,
+section {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* widget right side */
+.profile-widget-right {
+  position: fixed;
+  right: 30px;
+  top: 5%;
+  z-index: 999;
+}
+.profile-widget-right ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+.profile-widget-right ul li {
+  /* Rectangle 22 */
+  list-style: none;
+  width: 111px;
+  height: 50px;
+  background-color: #8996af;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-widget-right ul li:active {
+  background-color: orange;
+}
+
+.profile-widget-right ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-widget-right ul li a p {
+  font-size: 18px;
+  color: #ffffff;
+  width: fit-content;
+  height: 70%;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+.search-widget {
+  position: fixed;
+  right: 320px;
+  top: 7%;
+  z-index: 999;
+  list-style: none;
+  width: 600px;
+  height: 50px;
+  background-color: #C7C7C7;
+  border-radius: 30px;
+  display: flex;
+  align-items:baseline;
+  justify-content: left;
+}
+.search-widget p{
+  font-size: 18px;
+  color: #000000;
+  height: 60px;
+  width: 500px;
+  padding: 0 90px 0 30px;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  left: 30px;
+
+}
+.profile-widget-left {
+  position: fixed;
+  left: 280px;
+  top: 5%;
+  z-index: 999;
+}
+.profile-widget-left ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+.profile-widget-left ul li {
+  /* Rectangle 22 */
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-widget-left ul li:active {
+  background-color: orange;
+}
+.profile-widget-left ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-widget-left ul li a p {
+  font-size: 20px;
+  color: #000000;
+  width: fit-content;
+  height: 70%;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-widget {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 60px;
+  /* top: ; */
+  z-index: 999;
+}
+
+/* end widget right */
+
+/* home section */
+.profile-home {
+  background-color: #DFF2EB;
+  display: flex;
+}
+
+.profile-home-wrapper {
+  max-width: 1800px;
+  max-height: 720px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.profile-form-content-wrap {
+  align-items: center;
+  
+}
+
+.profile-form-content-text h1 {
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: orange;
+  margin-bottom: 20px;
+  margin-top: 0;
+  margin-right: auto;
+}
+.profile-form-content-text h1 span {
+  color: white;
+}
+
+.profile-form-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+
+.profile-form-content-wrap img {
+  position: relative;  /* Ubah dari absolute ke relative */
+  height: 800px;
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  margin: 0 0 20px 0;  /* Beri space antara gambar dan teks */
+}
+
+.profile-form-content2-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  position: relative;
+}
+
+.profile-form-content2-wrap img {
+  position: relative;  /* Ubah dari absolute ke relative */
+  height: 400px;
+  width: 30%;
+  border-radius: 30px;
+  object-fit: cover;
+  margin: 50px 0 20px 0;
+  left: 70%;  /* Beri space antara gambar dan teks */
+}
+
+.profile-form-content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+}
+
+.profile-form-content-desc {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 40px;
+  width: 80%;
+  margin-top: 0;
+}
+
+.btn-profile-form-content {
+  position: relative;
+  height: 60px;
+  width: fit-content;
+  padding: 0 90px 0 30px;
+  border: 1px solid yellow;
+  border-radius: 44px;
+  background-color: #1a0842;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-profile-form-content .btn-profile-form-content-circle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: yellow;
+  border-radius: 100%;
+  appearance: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-profile-form-content .btn-profile-form-content-circle img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+/* end home section */
+
+/* section 2 (secondary content) */
+.profile-section2 {
+  background-color: #28105c;
+  display: flex;
+}
+.profile-section2 p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+.profile-about-wrapper,
+.profile-end-wrapper {
+  max-width: 1200px;
+  max-height: 720px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.profile-about-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.profile-about-content-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.profile-about-content-card {
+  background-color: #403c7c;
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.profile-about-content-card h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.profile-about-content-text p {
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+.profile-about-content-text h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/* end section 2 */
+
+/* section 3 (tertiary content) */
+.profile-section3 {
+  background-color: #1a0842;
+  display: flex;
+}
+.profile-end-content-text {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+.profile-end-content-text h1 {
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: auto;
+}
+.profile-end-content-text h2 {
+  color: orange;
+  font-size: 50px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+/* end section 3 */
+
+/* 
+=================================
+  BUAT HEADER WEB PESAN TERBARU/ KOMUNITAS (PESAN, SEARCHBAR)
+==================================
+*/
+
+/* text pesan di pojok kiri atas */
+.pesanweb-widget {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 80px;
+  z-index: 999;
+  font-size: 50px;
+  color: #000000;
+  width: fit-content;
+  height: 17%;
+  font-weight: bold;
+}
+
+/* searchbar */
+/* kotak buat searchbar */
+.searchpesanweb-widget {
+  position: fixed;
+  right: 76px;
+  top: 4%;
+  z-index: 999;
+  list-style: none;
+  width: 843px;
+  height: 97px;
+  background-color: #C7C7C7;
+  border-radius: 30px;
+  display: flex;
+  align-items:baseline;
+  justify-content: left;
+}
+
+/* buat ikon magnifying glass */
+.searchweb-icon {
+  width: 37px;
+  height: 37px;
+  position: fixed;          
+  left: 1290px;               
+  top: 70px; 
+}
+
+/* buat text cari */
+.searchpesanweb-widget p{
+  font-size: 24px;
+  color: #000000;
+  height: 60px;
+  width: 500px;
+  padding: 0 90px 0 30px;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  left: 30px;
+  
+}
+
+/* 
+=================================
+       WEB PESAN TERBARU
+==================================
+*/
+/* 
+=================================
+       WEB PESAN TERBARU
+==================================
+*/
+
+/* pesan terbaru */
+/* buat box pesan terbaru */
+.pesanterbaruweb-widget {
+  position: fixed;
+  left: 148px;
+  top: 208px;
+  z-index: 999;
+  list-style: none;
+  width: 497px;
+  height: 86px;
+  background-color: #96D7FF;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text pesan terbaru */
+.pesanterbaruweb-widget p{
+  font-size: 40px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* komunitas */
+/* buat kotak komunitas */
+.komunitasweb-widget {
+  position: fixed;
+  left: 777px;
+  top: 208px;
+  z-index: 999;
+  list-style: none;
+  width: 497px;
+  height: 86px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text komunitas */
+.komunitasweb-widget p{
+  font-size: 40px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* list chat */
+/* Buat gabungan list chat */
+.chatweb-list-section {
+  position: fixed;          
+  left: 148px;               
+  top: 320px;    
+}
+
+/* buat smua item chat dipage */
+.chatweb-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+/* gambar profil */
+.chatweb-avatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000000;
+  margin-right: 15px;
+}
+
+/* buat style nama chat sama pesan terakhir */
+.chatweb-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* buat text nama kontak */
+.chatweb-name {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a0842;
+  margin: 0;
+}
+
+/* buat text pesan terakhir */
+.chatweb-last {
+  font-size: 24px;
+  color: #444;
+  margin: 5px 0 0 0;
+}
+
+/* 
+=================================
+         WEB KOMUNITAS
+==================================
+*/
+/* 
+=================================
+         WEB KOMUNITAS
+==================================
+*/
+
+/* pesan terbaru */
+/* buat box pesan terbaru */
+.pesanterbarudikomweb-widget {
+  position: fixed;
+  left: 148px;
+  top: 208px;
+  z-index: 999;
+  list-style: none;
+  width: 497px;
+  height: 86px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text pesan terbaru */
+.pesanterbarudikomweb-widget p{
+  font-size: 40px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* komunitas */
+/* buat box komunitas */
+.komunitaschatweb-widget {
+  position: fixed;
+  left: 777px;
+  top: 208px;
+  z-index: 999;
+  list-style: none;
+  width: 497px;
+  height: 86px;
+  background-color: #96D7FF;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text komunitas */
+.komunitaschatweb-widget p{
+  font-size: 40px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* buat list komunitas */
+/* buat style section list komunitas */
+.komunitasweb-list-section {
+  position: fixed;
+  left: 148px;
+  top: 320px;
+}
+
+/* buat style wrapper list komunitas */
+.komunitasweb-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* buat list smua item komunitas */
+.komunitasweb-item {
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: left;   /* center secara horizontal */
+  width: 1126px;
+  height: 120px;
+}
+
+/* buat foto sama nama */
+.komunitasweb-avatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000000;
+  margin-right: 20px;
+}
+
+/* buat posisi text nama komunitas */
+.komunitasweb-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+}
+
+/* buat text nama komunitas*/
+.komunitasweb-name {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a0842;
+  margin: 0;
+  display: flex;
+  align-items:self-start ;
+  justify-content: left;
+}
+
+/* buat tombol bergabing dikanan */
+.komunitasweb-last {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  background-color: #4F75FF;
+  padding: 10px 30px;
+  border-radius: 10px;
+  width: 214px;
+  height: 57px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+=================================
+  BUAT HEADER MOBILE PESAN TERBARU/ KOMUNITAS (PESAN, SEARCHBAR)
+==================================
+*/
+/* 
+=================================
+  BUAT HEADER MOBILE PESAN TERBARU/ KOMUNITAS (PESAN, SEARCHBAR)
+==================================
+*/
+
+.kotakheader-widget {
+  z-index: 999;
+  list-style: none;
+  width: 422px;
+  height: 109px;
+  background-color: #B9E5E8;
+  display: flex;
+  align-items:baseline;
+}
+
+/* text pesan di pojok kiri atas */
+.pesanmobile-widget {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 36px;
+  font-size: 32px;
+  color: #000000;
+  width: fit-content;
+  height: 15%;
+  font-weight: bold;
+}
+
+/* searchbar */
+/* kotak buat searchbar */
+.searchpesanmobile-widget {
+  position: fixed;
+  left: 217px;
+  top: 5%;
+  z-index: 999;
+  list-style: none;
+  width: 164px;
+  height: 49px;
+  background-color: #C7C7C7;
+  border-radius: 30px;
+  display: flex;
+  align-items:baseline;
+  justify-content: left;
+}
+
+/* buat ikon magnifying glass */
+.searchmobile-icon {
+  width: 22px;
+  height: 22px;
+  position: fixed;          
+  left: 345px;               
+  top: 60px; 
+}
+
+/* buat text cari */
+.searchpesanmobile-widget p{
+  font-size: 20px;
+  color: #000000;
+  /* padding: 0px 0px 0px 20px; */
+  /* object-fit: cover; */
+  position: fixed;          
+  left: 230px;               
+  top: 40px; 
+}
+
+/* 
+=================================
+       MOBILE PESAN TERBARU
+==================================
+*/
+/* 
+=================================
+       MOBILE PESAN TERBARU
+==================================
+*/
+/* pesan terbaru */
+/* buat box pesan terbaru */
+.pesanterbarumobile-widget {
+  position: fixed;
+  left: 36px;
+  top: 129px;
+  z-index: 999;
+  list-style: none;
+  width: 152px;
+  height: 37px;
+  background-color: #96D7FF;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text pesan terbaru */
+.pesanterbarumobile-widget p{
+  font-size: 15px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* komunitas */
+/* buat kotak komunitas */
+.komunitasmobile-widget {
+  position: fixed;
+  left: 229px;
+  top: 129px;
+  z-index: 999;
+  list-style: none;
+  width: 152px;
+  height: 37px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text komunitas */
+.komunitasmobile-widget p{
+  font-size: 15px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* list chat */
+/* Buat gabungan list chat */
+.chatmobile-list-section {
+  position: fixed;          
+  left: 28px;               
+  top: 207px;    
+}
+
+/* buat smua item chat dipage */
+.chatmobile-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+/* gambar profil */
+.chatmobile-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000000;
+  margin-right: 15px;
+}
+
+/* buat style nama chat sama pesan terakhir */
+.chatmobile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* buat text nama kontak */
+.chatmobile-name {
+  font-size: 30px;
+  color: #1a0842;
+  margin: 0;
+}
+
+/* buat text pesan terakhir */
+.chatmobile-last {
+  font-size: 16px;
+  color: #444;
+  margin: 5px 0 0 0;
+}
+
+/* 
+=================================
+         MOBILE KOMUNITAS
+==================================
+*/
+/* 
+=================================
+         MOBILE KOMUNITAS
+==================================
+*/
+
+/* pesan terbaru */
+/* buat box pesan terbaru */
+.pesanterbarudikommobile-widget {
+  position: fixed;
+  left: 36px;
+  top: 129px;
+  z-index: 999;
+  list-style: none;
+  width: 152px;
+  height: 37px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text pesan terbaru */
+.pesanterbarudikommobile-widget p{
+  font-size: 15px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* komunitas */
+/* buat box komunitas */
+.komunitaschatmobile-widget {
+  position: fixed;
+  left: 229px;
+  top: 129px;
+  z-index: 999;
+  list-style: none;
+  width: 152px;
+  height: 37px;
+  background-color: #96D7FF;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text komunitas */
+.komunitaschatmobile-widget p{
+  font-size: 15px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* buat list komunitas */
+/* buat style section list komunitas */
+.komunitasmobile-list-section {
+  position: fixed;
+  left: 27px;
+  top: 241px;
+}
+
+/* buat style wrapper list komunitas */
+.komunitasmobile-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* buat list smua item komunitas */
+.komunitasmobile-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* biar isi kiri (profil+nama) dan kanan (tombol) sejajar */
+  /* width: 341px;
+  height: px; */
+}
+
+/* buat foto sama nama */
+.komunitasmobile-avatar {
+  width: 85px;
+  height: 81px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000000;
+  margin-right: 20px;
+}
+
+/* buat posisi text nama komunitas */
+.komunitasmobile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+/* buat text nama komunitas*/
+.komunitasmobile-name {
+  font-size: 24px;
+  color: #1a0842;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/* buat tombol bergabing dikanan */
+.komunitasmobile-last {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  background-color: #4F75FF;
+  padding: 10px 30px;
+  border-radius: 30px;
+  width: 50px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+=================================
+         WEB DETAIL PEMESANAN
+==================================
+
+=================================
+         WEB DETAIL PEMESANAN
+==================================
+*/
+
+/* Bungkus kiri */
+.pesandetailpemesananweb-widget-left {
+  position: fixed;
+  left: 280px;
+  top: 5%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column; /* supaya anak-anaknya (judul + ul) berjejer vertikal */
+  align-items: flex-start;
+}
+
+/* Judul "Pesanan" */
+.pesandetailpemesananweb-widget p {
+  /* color: #000000;
+  font-size: 50px;
+  margin: 0 0 20px 0; */
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 60px;
+  top: 10px;
+  z-index: 999;
+  color: #000000;
+  font-size: 50px;
+}
+
+/* List menu */
+.pesandetailpemesananweb-widget-left ul {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 60px;
+  top: 150px;
+  flex-direction: row; /* sejajar secara horizontal */
+  gap: 190px; /* jarak antar item */
+  margin: 0;
+  padding: 0;
+}
+
+/* Item list */
+.pesandetailpemesananweb-widget-left ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Teks dalam list */
+.pesandetailpemesananweb-widget-left ul li p {
+  font-size: 32px;
+  color: #000000;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.container{
+  display:flex;
+  gap:20px;
+}
+
+.maincontentdetpesweb, aside{
+  color: #000000ff;
+  /* background: #91ADC8; */
+  padding:20px;
+  border-radius: 20px;        
+}
+
+.maincontentdetpesweb {
+  flex:2;
+}
+
+aside {
+  flex:1;
+  background-color: #E5EBC1;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 945px;
+  top: 45px;
+  width: 400px;
+  height: 900px;
+}
+
+.pesandetailpemesananweb-widget-left hr {
+  position: fixed;
+  left: 60px;
+  top: 230px; /* atur sesuai posisi di bawah list kamu */
+  width: 820px; /* atau atur panjangnya */
+  border: 1px solid #000000;
+  z-index: 998; /* biar muncul di bawah tulisan tapi di atas background */
+}
+
+.textinfopembayaranweb p {
+  /* color: #000000;
+  font-size: 50px;
+  margin: 0 0 20px 0; */
+  display: flex;
+  /* align-items: center; */
+  position: fixed;
+  right: 115px;
+  top: 40px;
+  z-index: 999;
+  color: #000000;
+  font-size: 40px;
+}
+
+.textmetodpembayaranweb p {
+  /* color: #000000;
+  font-size: 50px;
+  margin: 0 0 20px 0; */
+  display: flex;
+  /* align-items: center; */
+  position: fixed;
+  right: 150px;
+  top: 150px;
+  z-index: 999;
+  color: #000000;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.tfbankweb-widget {
+  position: fixed;
+  right: 360px;
+  top: 250px;
+  z-index: 999;
+  list-style: none;
+  width: 30px;
+  height: 30px;
+  background-color: #96D7FF;
+  border-radius: 30px;
+  border: 5px solid #0066ff;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text tfbankweb */
+.tfbankweb-widget p{
+  position: fixed;
+  right: 190px;
+  top: 250px;
+  font-size: 20px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* buat image tfbank */
+.tfbankweb-widget img{
+  position: fixed;
+  right: 320px;
+  top: 250px;
+  width: 30px;
+  height: 30px;
+}
+
+/* List menu */
+.listtfbank ul {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  right: 180px;
+  top: 300px;
+  flex-direction: column; /* sejajar secara horizontal */
+  gap: 10px; /* jarak antar item */
+  margin: 0;
+  padding: 0;
+}
+
+/* Item list */
+.listtfbank ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 30px;
+  background-color: #C7C7C7; /* merah terang */
+  border-radius: 10px; /* biar agak rounded, opsional */
+  padding-left: 15px; /* biar teksnya agak masuk */
+  border: 2px solid #000000;
+}
+
+
+/* Teks dalam list */
+.listtfbank ul li p {
+  font-size: 15px;
+  color: #000000;
+  margin: 0;
+  /* padding: 5px 10px; */
+}
+
+.listtfbank ul li img {
+  width: 30px;      /* ukuran logo */
+  height: 30px;     /* biar kotak */
+  object-fit: contain; /* supaya logo gak gepeng */
+  margin-right: 10px;  /* jarak dari teks */
+  border-radius: 5px;  /* opsional, biar halus sudutnya */
+}
+
+.dompetdigweb-widget {
+  position: fixed;
+  right: 360px;
+  top: 460px;
+  z-index: 999;
+  list-style: none;
+  width: 30px;
+  height: 30px;
+  background-color: #E5EBC1;
+  border-radius: 30px;
+  border: 2px solid #000000;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text tfbankweb */
+.dompetdigweb-widget p{
+  position: fixed;
+  right: 180px;
+  top: 460px;
+  font-size: 20px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* buat image tfbank */
+.dompetdigweb-widget img{
+  position: fixed;
+  right: 325px;
+  top: 460px;
+  width: 30px;
+  height: 30px;
+}
+
+/* buat image tfbank */
+.dompetdigwebdownar-widget img{
+  position: fixed;
+  right: 250px;
+  top: 520px;
+  width: 30px;
+  height: 30px;
+}
+
+.noakunvir-widget p{
+  display: flex;
+  position: fixed;
+  right: 200px;
+  top: 570px;
+  font-size: 25px;
+  color: #3a3a3a;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+}
+
+.noak-widget p{
+  display: flex;
+  position: fixed;
+  right: 215px;
+  top: 620px;
+  font-size: 20px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+}
+
+.salin-widget p{
+  display: flex;
+  position: fixed;
+  right: 150px;
+  top: 620px;
+  font-size: 20px;
+  color: #00c8ff;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+}
+
+.cektrans-widget p{
+  display: flex;
+  position: fixed;
+  right: 150px;
+  top: 660px;
+  font-size: 10px;
+  color: #00c8ff;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+}
+
+.okehdetpes-widget {
+  width: 200px;
+  height: 50px;
+  background-color: #96D7FF; /* hijau neon */
+  border-radius: 10px;        /* biar sudutnya agak halus */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 165px;
+  top: 690px;
+}
+
+.okehdetpes-widget p {
+  font-size: 25px;
+  font-weight: 700;
+  color: #000000; /* teks hitam biar kontras */
+  margin: 0;
+}
+
+/* ====== LIST PRODUK ====== */
+.listproduk {
+  position: fixed;
+  left: 60px;
+  top: 250px;
+}
+
+/* Wrapper */
+.listsmuaproduk ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tiap produk */
+.listsmuaproduk ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 780px;
+  height: 100px;
+  list-style: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  z-index: 999;
+}
+
+/* Gambar produk */
+.listsmuaproduk ul li img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: none; /* hapus pinggiran gambar juga */
+}
+
+/* Nama produk */
+.nama-produk {
+  flex: 2;
+  font-size: 20px;
+  color: #1a0842;
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+/* Jumlah produk */
+.jumlah {
+  position: absolute;
+  left: 400px;
+  top: 38px;
+  font-size: 18px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Total harga */
+.total-harga {
+  flex: 1;
+  text-align: right;
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Tombol X */
+/* .tombolx {
+  
+  width: 18px; 
+  height: 18px;
+  cursor: pointer;
+} */
+
+.listproduk .listsmuaproduk ul li .tombolx img {
+  position: absolute;
+  left: 830px;
+  top: 45px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+/* Garis bawah */
+.listsmuaproduk hr {
+  border: 1px solid #000000;
+  width: 840px;
+  margin-top: 20px;
+}
+
+.kembali-widget p {
+  position: absolute;
+  bottom: 100px;
+  left: 120px;
+  font-size: 30px;
+}
+
+.kembali-widget img{
+  position: absolute;
+  bottom: 130px;
+  left: 60px;
+  width: 40px;
+  height: 40px;
+}
+
+/* ====== BAGIAN TOTAL PEMBAYARAN ====== */
+
+/* ====== SUBTOTAL ====== */
+.subtotal-widget {
+  position: fixed;
+  right: 700px;   /* ubah sesuai kebutuhan */
+  top: 800px;    /* ubah sesuai kebutuhan */
+  display: flex;
+  gap: 10px;
+  font-size: 22px;
+  color: #000;
+}
+
+/* Nilai subtotal */
+.subtotalharga-widget {
+  position: fixed;
+  right: 600px;   /* ubah sesuai kebutuhan */
+  top: 800px;    /* ubah sesuai kebutuhan */
+  font-size: 22px;
+  color: #000;
+}
+
+/* ====== PENGIRIMAN ====== */
+.pengiriman-widget {
+  position: fixed;
+  right: 700px;   /* ubah sesuai kebutuhan */
+  top: 830px;    /* ubah sesuai kebutuhan */
+  display: flex;
+  gap: 10px;
+  font-size: 22px;
+  color: #000;
+}
+
+.pengirimanharga-widget {
+  position: fixed;
+  left: 1110px;
+  top: 940px;
+  font-size: 22px;
+  color: #000;
+}
+
+/* ====== GARIS PEMBATAS ====== */
+.ringkasan-harga hr{
+  position: fixed;
+  right: 700px;
+  top: 900px;
+  width: 300px;
+  border: 1px solid #000000;
+}
+
+/* ====== TOTAL ====== */
+.total-widget {
+  position: fixed;
+  right: 700px;   /* ubah sesuai kebutuhan */
+  top: 900px;    /* ubah sesuai kebutuhan */
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+}
+
+.totalharga-widget {
+  position: fixed;
+  right: 700px;   /* ubah sesuai kebutuhan */
+  top: 900;    /* ubah sesuai kebutuhan */
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+}
+
+/* 
+=================================
+         MOBILE DETAIL PEMESANAN
+==================================
+
+=================================
+         MOBILE DETAIL PEMESANAN
+==================================
+*/
+
+/* Bungkus kiri */
+.pesandetailpemesananmobile-widget-left {
+  position: fixed;
+  left: 280px;
+  top: 5%;
+  z-index: 999;
+  display: flex;
+  flex-direction: column; /* supaya anak-anaknya (judul + ul) berjejer vertikal */
+  align-items: flex-start;
+}
+
+/* Judul "Pesanan" */
+.pesandetailpemesananwebmobile-widget p {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 40px;
+  top: 5px;
+  z-index: 999;
+  color: #000000;
+  font-size: 32px;
+}
+
+/* List menu */
+.pesandetailpemesananmobile-widget-left ul {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 60px;
+  top: 100px;
+  flex-direction: row; /* sejajar secara horizontal */
+  gap: 30px; /* jarak antar item */
+  margin: 0;
+  padding: 0;
+}
+
+/* Item list */
+.pesandetailpemesananmobile-widget-left ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Teks dalam list */
+.pesandetailpemesananmobile-widget-left ul li p {
+  font-size: 20px;
+  color: #000000;
+  margin: 0;
+  /* padding: 5px 10px; */
+}
+
+.container{
+  display:flex;
+  gap:20px;
+}
+
+.maincontentdetpesweb, aside{
+  color: #000000ff;
+  /* background: #91ADC8; */
+  padding:20px;
+  border-radius: 20px;        
+}
+
+.maincontentdetpesweb {
+  flex:2;
+}
+
+aside {
+  flex:1;
+  background-color: #E5EBC1;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 945px;
+  top: 45px;
+  width: 400px;
+  height: 900px;
+}
+
+.pesandetailpemesananmobile-widget-left hr {
+  position: fixed;
+  left: 60px;
+  top: 140px; /* atur sesuai posisi di bawah list kamu */
+  width: 300px; /* atau atur panjangnya */
+  border: 1px solid #000000;
+  z-index: 998; /* biar muncul di bawah tulisan tapi di atas background */
+}
+
+.textinfopembayaranmob p {
+  font-size: 30px;
+  position: absolute;
+  bottom: 350px;
+  left: 100px;
+}
+
+.textmetodpembayaranmob p {
+  display: flex;
+  position: absolute;
+  bottom: 320px;
+  left: 100px;
+  z-index: 999;
+  color: #000000;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.tfbankmob-widget {
+  position: absolute;
+  bottom: 300px;
+  left: 100px;
+  z-index: 999;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background-color: #96D7FF;
+  border-radius: 30px;
+  border: 5px solid #0066ff;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+/* buat text tfbankweb */
+.tfbankmob-widget p{
+  position: absolute;
+  bottom: 1px;
+  left: 100px;
+  font-size: 15px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* buat image tfbank */
+.tfbankmob-widget img{
+  position: fixed;
+  left: 150px;
+  bottom: 300px;
+  width: 30px;
+  height: 30px;
+}
+
+.dompetdigmobdownar-widget1{
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  left: 320px;
+  bottom: 320px;
+}
+
+.dompetdigmob-widget {
+  position: absolute;
+  bottom: 300px;
+  left: 100px;
+  z-index: 999;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background-color: #96D7FF;
+  border-radius: 30px;
+  border: 5px solid #0066ff;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;    /* center secara horizontal */
+}
+
+/* buat text tfbankweb */
+.dompetdigmob-widget p{
+  position: fixed;
+  right: 110px;
+  bottom: 230px;
+  font-size: 15px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* buat image tfbank */
+.dompetdigmob-widget img{
+  position: fixed;
+  left: 150px;
+  bottom: 230px;
+  width: 30px;
+  height: 30px;
+}
+
+/* dompetdigmobdownar-widget2 */
+
+.dompetdigmobdownar-widget2{
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  left: 320px;
+  bottom: 240px;
+}
+
+.noakunvirmob-widget p{
+  display: flex;
+  position: fixed;
+  left: 120px;
+  bottom: 180px;
+  font-size: 25px;
+  color: #3a3a3a;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+}
+
+.noak-widgetmob p{
+  display: flex;
+  position: fixed;
+  right: 180px;
+  bottom: 150px;
+  font-size: 15px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+}
+
+.salin-widgetmob p{
+  display: flex;
+  position: fixed;
+  right: 100px;
+  bottom: 150px;
+  font-size: 20px;
+  color: #00c8ff;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+}
+
+.cektrans-widget p{
+  display: flex;
+  position: fixed;
+  right: 150px;
+  top: 660px;
+  font-size: 10px;
+  color: #00c8ff;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+}
+
+.okehdetpes-widgetmob {
+  width: 200px;
+  height: 50px;
+  background-color: #96D7FF; /* hijau neon */
+  border-radius: 10px;        /* biar sudutnya agak halus */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 100px;
+  top: 780px;
+}
+
+.okehdetpes-widgetmob p {
+  font-size: 25px;
+  font-weight: 700;
+  color: #000000; /* teks hitam biar kontras */
+  margin: 0;
+}
+
+/* ====== LIST PRODUK ====== */
+.listprodukmobile {
+  position: fixed;
+  left: 60px;
+  top: 150px;
+}
+
+/* Wrapper */
+.listsmuaprodukmobile ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tiap produk */
+.listsmuaprodukmobile ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  height: 100px;
+  list-style: none;
+  /* border-radius: 12px;
+  padding: 10px 20px; */
+  z-index: 999;
+}
+
+/* Gambar produk */
+/* .listsmuaprodukmobile ul li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: none;
+} */
+
+/* Nama produk */
+.nama-produkmob {
+  flex: 2;
+  font-size: 15px;
+  color: #1a0842;
+  /* margin-left: 20px;*/
+  font-weight: 600;
+}
+
+/* Jumlah produk */
+.jumlahmob {
+  position: absolute;
+  left: 120px;
+  top: 25px;
+  font-size: 15px;
+  color: #000;
+  /* font-weight: 500; */
+}
+
+/* Total harga */
+.total-hargamob {
+  flex: 1;
+  position: absolute;
+  left: 230px;
+  top: 25px;
+  font-size: 15px;
+  color: #000000;
+  /* font-weight: 600; */
+}
+
+/* Garis bawah */
+.listsmuaprodukmobile hr {
+  border: 1px solid #000000;
+  width: 300px;
+  margin-top: 20px;
+}
+
+.kembali-widget p {
+  position: absolute;
+  bottom: 100px;
+  left: 120px;
+  font-size: 30px;
+}
+
+.kembali-widget img{
+  position: absolute;
+  bottom: 130px;
+  left: 60px;
+  width: 40px;
+  height: 40px;
+}
+
+/* ====== BAGIAN TOTAL PEMBAYARAN ====== */
+
+/* ====== SUBTOTAL ====== */
+.subtotal-widget {
+  position: fixed;
+  right: 700px;   /* ubah sesuai kebutuhan */
+  top: 800px;    /* ubah sesuai kebutuhan */
+  display: flex;
+  gap: 10px;
+  font-size: 22px;
+  color: #000;
+}
+
+/* Nilai subtotal */
+.subtotalharga-widget {
+  position: fixed;
+  right: 600px;   /* ubah sesuai kebutuhan */
+  top: 800px;    /* ubah sesuai kebutuhan */
+  font-size: 22px;
+  color: #000;
+}
+
+/* ====== PENGIRIMAN ====== */
+.pengiriman-widget {
+  position: fixed;
+  right: 700px;   /* ubah sesuai kebutuhan */
+  top: 830px;    /* ubah sesuai kebutuhan */
+  display: flex;
+  gap: 10px;
+  font-size: 22px;
+  color: #000;
+}
+
+.pengirimanharga-widget {
+  position: fixed;
+  left: 1110px;
+  top: 940px;
+  font-size: 22px;
+  color: #000;
+}
+
+/* ====== GARIS PEMBATAS ====== */
+.ringkasan-harga hr{
+  position: fixed;
+  right: 700px;
+  top: 900px;
+  width: 300px;
+  border: 1px solid #000000;
+}
+
+/* ====== TOTAL ====== */
+.total-widget {
+  position: fixed;
+  right: 700px;   /* ubah sesuai kebutuhan */
+  top: 900px;    /* ubah sesuai kebutuhan */
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+}
+
+.totalharga-widget {
+  position: fixed;
+  right: 700px;   /* ubah sesuai kebutuhan */
+  top: 900;    /* ubah sesuai kebutuhan */
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+}
