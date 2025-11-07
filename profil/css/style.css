@@ -1,0 +1,1279 @@
+body {
+  font-family: Host Grotesk;
+  background-color: #DFF2EB;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400px;
+}
+
+.profile-wrapper,
+section {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* widget right side */
+.profile-widget-right {
+  position: fixed;
+  right: 30px;
+  top: 5%;
+  z-index: 999;
+}
+.profile-widget-right ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+.profile-widget-right ul li {
+  /* Rectangle 22 */
+  list-style: none;
+  width: 111px;
+  height: 50px;
+  background-color: #8996af;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-widget-right ul li:active {
+  background-color: orange;
+}
+
+.profile-widget-right ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-widget-right ul li a p {
+  font-size: 18px;
+  color: #ffffff;
+  width: fit-content;
+  height: 70%;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+.search-widget {
+  position: fixed;
+  right: 320px;
+  top: 7%;
+  z-index: 999;
+  list-style: none;
+  width: 600px;
+  height: 50px;
+  background-color: #C7C7C7;
+  border-radius: 30px;
+  display: flex;
+  align-items:baseline;
+  justify-content: left;
+}
+.search-widget p{
+  font-size: 18px;
+  color: #000000;
+  height: 60px;
+  width: 500px;
+  padding: 0 90px 0 30px;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  left: 30px;
+
+}
+.profile-widget-left {
+  position: fixed;
+  left: 280px;
+  top: 5%;
+  z-index: 999;
+}
+.profile-widget-left ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+.profile-widget-left ul li {
+  /* Rectangle 22 */
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-widget-left ul li:active {
+  background-color: orange;
+}
+.profile-widget-left ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-widget-left ul li a p {
+  font-size: 20px;
+  color: #000000;
+  width: fit-content;
+  height: 70%;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-widget {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 60px;
+  /* top: ; */
+  z-index: 999;
+}
+
+/* end widget right */
+
+/* home section */
+.profile-home {
+  background-color: #DFF2EB;
+  display: flex;
+}
+
+.profile-home-wrapper {
+  max-width: 1800px;
+  max-height: 720px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.profile-form-content-wrap {
+  align-items: center;
+  
+}
+
+.profile-form-content-text h1 {
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: orange;
+  margin-bottom: 20px;
+  margin-top: 0;
+  margin-right: auto;
+}
+.profile-form-content-text h1 span {
+  color: white;
+}
+
+.profile-form-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+
+.profile-form-content-wrap img {
+  position: relative;  /* Ubah dari absolute ke relative */
+  height: 800px;
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  margin: 0 0 20px 0;  /* Beri space antara gambar dan teks */
+}
+
+.profile-form-content2-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  position: relative;
+}
+
+.profile-form-content2-wrap img {
+  position: relative;  /* Ubah dari absolute ke relative */
+  height: 400px;
+  width: 30%;
+  border-radius: 30px;
+  object-fit: cover;
+  margin: 50px 0 20px 0;
+  left: 70%;  /* Beri space antara gambar dan teks */
+}
+
+.profile-form-content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+}
+
+.profile-form-content-desc {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 40px;
+  width: 80%;
+  margin-top: 0;
+}
+
+.btn-profile-form-content {
+  position: relative;
+  height: 60px;
+  width: fit-content;
+  padding: 0 90px 0 30px;
+  border: 1px solid yellow;
+  border-radius: 44px;
+  background-color: #1a0842;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-profile-form-content .btn-profile-form-content-circle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: yellow;
+  border-radius: 100%;
+  appearance: none;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-profile-form-content .btn-profile-form-content-circle img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+/* end home section */
+
+/* section 2 (secondary content) */
+.profile-section2 {
+  background-color: #28105c;
+  display: flex;
+}
+.profile-section2 p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+.profile-about-wrapper,
+.profile-end-wrapper {
+  max-width: 1200px;
+  max-height: 720px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.profile-about-content-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.profile-about-content-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+.profile-about-content-card {
+  background-color: #403c7c;
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.profile-about-content-card h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.profile-about-content-text p {
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+.profile-about-content-text h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+/* end section 2 */
+
+/* section 3 (tertiary content) */
+.profile-section3 {
+  background-color: #1a0842;
+  display: flex;
+}
+.profile-end-content-text {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+.profile-end-content-text h1 {
+  font-size: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: auto;
+}
+.profile-end-content-text h2 {
+  color: orange;
+  font-size: 50px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+/* end section 3 */
+
+/* 
+=================================
+            Page PESAN
+==================================
+*/
+.pesan-widget {
+  display: flex;
+  color: #000000;
+  align-items: center;
+  position: fixed;
+  left: 80px;
+  /*top: ; */
+  z-index: 999;
+  font-size: 50px;
+  color: #000000;
+  width: fit-content;
+  height: 17%;
+  font-weight: bold;
+  /* object-fit: cover; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+/* 
+=================================
+            SEARCHBAR
+==================================
+*/
+
+.searchpesan-widget {
+  position: fixed;
+  right: 76px;
+  top: 4%;
+  z-index: 999;
+  list-style: none;
+  width: 843px;
+  height: 97px;
+  background-color: #C7C7C7;
+  border-radius: 30px;
+  display: flex;
+  align-items:baseline;
+  justify-content: left;
+}
+
+.search-icon {
+  width: 37px;
+  height: 37px;
+  position: fixed;          
+  left: 1290px;               
+  top: 70px; 
+}
+
+.searchpesan-widget p{
+  font-size: 24px;
+  color: #000000;
+  height: 60px;
+  width: 500px;
+  padding: 0 90px 0 30px;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  left: 30px;
+  
+}
+
+/* 
+=================================
+            PESAN TERBARU
+==================================
+*/.pesanterbaru-widget {
+  position: fixed;
+  left: 148px;
+  top: 208px;
+  z-index: 999;
+  list-style: none;
+  width: 497px;
+  height: 86px;
+  background-color: #96D7FF;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+.pesanterbaru-widget p{
+  font-size: 40px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* 
+=================================
+          KOMUNITAS
+==================================
+*/
+.komunitas-widget {
+  position: fixed;
+  left: 777px;
+  top: 208px;
+  z-index: 999;
+  list-style: none;
+  width: 497px;
+  height: 86px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+.komunitas-widget p{
+  font-size: 40px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* 
+=================================
+            CHAT LIST
+==================================
+*/
+
+.chat-list-section {
+  position: fixed;          
+  left: 148px;               
+  top: 320px;    
+}
+
+/* Tiap item chat */
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+/* Gambar profil */
+.chat-avatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000000;
+  margin-right: 15px;
+}
+
+/* Info nama & pesan terakhir */
+.chat-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Nama pengirim */
+.chat-name {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a0842;
+  margin: 0;
+}
+
+/* Pesan terakhir */
+.chat-last {
+  font-size: 24px;
+  color: #444;
+  margin: 5px 0 0 0;
+}
+
+/* 
+=================================
+            KOMUNITAS CHAT
+==================================
+*/
+.komunitaschat-widget {
+  position: fixed;
+  left: 777px;
+  top: 208px;
+  z-index: 999;
+  list-style: none;
+  width: 497px;
+  height: 86px;
+  background-color: #96D7FF;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+.komunitaschat-widget p{
+  font-size: 40px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* 
+=================================
+            KOMUNITAS LIST
+==================================
+*/
+
+/* Section daftar komunitas */
+.komunitas-list-section {
+  position: fixed;
+  left: 148px;
+  top: 320px;
+}
+
+/* Wrapper-nya */
+.komunitas-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* jarak antar box komunitas */
+}
+
+/* Tiap item komunitas */
+.komunitas-item {
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: left;   /* center secara horizontal */
+  width: 1126px;
+  height: 120px;
+}
+
+/* Bagian kiri: foto + nama */
+.komunitas-avatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  /* object-fit: cover; */
+  border: 2px solid #000000;
+  /* margin-right: 20px; */
+}
+
+.komunitas-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+}
+
+.komunitas-name {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a0842;
+  margin: 0;
+}
+
+/* Tombol Bergabung (di kanan) */
+.komunitas-last {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  background-color: #4F75FF;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+
+/* 
+=================================
+            PESAN TERBARU
+==================================
+*/.pesanterbarudikom-widget {
+  position: fixed;
+  left: 148px;
+  top: 208px;
+  z-index: 999;
+  list-style: none;
+  width: 497px;
+  height: 86px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;       /* center secara vertikal */
+  justify-content: center;   /* center secara horizontal */
+}
+
+.pesanterbarudikom-widget p{
+  font-size: 40px;
+  color: #000000;
+  margin: 0; /* hapus jarak default dari <p> */
+  padding: 0; /* hapus padding biar gak geser */
+  font-weight: bold;
+}
+
+/* 
+=================================
+         Detail Rental
+==================================
+*/
+/* Warna dasar halaman */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #d9f2ec;
+  margin: 0;
+  padding: 0;
+}
+
+/* WRAPPER KARTU DETAIL */
+.detail-rental {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* KOTAK ABU-ABU */
+.detail-card {
+  display: flex;
+  align-items: center;
+  background-color: #e5e5e5;
+  border-radius: 30px;
+  padding: 60px 80px;
+  width: 80%;
+  height: 55vh;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  gap: 70px;
+}
+
+/* FOTO PRODUK */
+.rental-image {
+  width: 280px;
+  height: 420px;
+  object-fit: contain;
+  border-radius: 20px;
+  background-color: white;
+  padding: 50px;
+}
+
+/* TEKS KANAN */
+.rental-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.rental-info h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a0842;
+}
+
+.rating {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.rating span.lapor {
+  color: #b1b1b1;
+  margin-left: 450px;
+  font-size: 16px;
+}
+
+.harga {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 5x;
+  color: #000;
+}
+
+.detail-list {
+  list-style: disc;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  color: #222;
+  font-size: 25px;
+}
+
+.deskripsi {
+  margin-top: 10px;
+  font-size: 25px;
+  color: #333;
+  max-width: 550px;
+}
+
+/* TOMBOL SEWA */
+.btn-sewa {
+  align-self: flex-end; /* posisi ke pojok kanan bawah */
+  background-color: #82cce3;
+  color: #000;
+  font-weight: 600;
+  padding: 12px 45px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.btn-sewa:hover {
+  background-color: #1a0842;
+  color: #fff;
+}
+
+/*mobile detail rental*/
+
+
+
+
+/* 
+=================================
+         Detail Fishing Spot
+==================================
+*/
+body {
+
+  background-color: #d9f2ec;
+  margin: 0;
+  padding: 0;
+}
+
+/* WRAPPER */
+.detail-spot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* KOTAK ABU */
+.detail-card {
+  display: flex;
+  align-items: center;
+  background-color: #e5e5e5;
+  border-radius: 30px;
+  padding: 60px 80px;
+  width: 80%;
+  height: 55vh;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  gap: 70px;
+}
+
+/* FOTO SPOT */
+.spot-image {
+  width: 280px;
+  height: 420px;
+  object-fit: contain;
+  border-radius: 20px;
+  background-color: white;
+  padding: 50px;
+}
+
+/* TEKS KANAN */
+.spot-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.spot-info h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a0842;
+}
+
+.rating {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.rating span.lapor {
+  color: #b1b1b1;
+  margin-left: 450px;
+  font-size: 20px
+}
+
+.lokasi, .cuaca {
+  font-size: 25px;
+  color: #333;
+  margin: 2px 0;
+}
+
+.detail {
+  margin-top: 15px;
+  font-size: 25px;  
+  color: #333;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+/* TOMBOL KUNJUNGI */
+.btn-kunjungi {
+  align-self: flex-end; /* posisi ke pojok kanan bawah */
+  background-color: #82cce3;
+  color: #000;
+  font-weight: 600;
+  padding: 12px 45px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.btn-kunjungi:hover {
+  background-color: #1a0842;
+  color: #fff;
+}
+
+
+/*detail rental*/
+
+.mobile-detail-body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #d9f2ec;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* WRAPPER */
+.mobile-detail-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* KOTAK UTAMA */
+.mobile-detail-card {
+  background-color: #e5e5e5;
+  border-radius: 25px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* TEKS “LAPORKAN” DI POJOK KANAN ATAS */
+.mobile-lapor {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 13px;
+  color: #b1b1b1;
+}
+
+/* FOTO PRODUK */
+.mobile-rental-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+/* INFORMASI PRODUK */
+.mobile-rental-info {
+  text-align: center;
+}
+
+.mobile-rental-info h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a0842;
+  margin-bottom: 5px;
+}
+
+.mobile-rating {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.mobile-harga {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.mobile-detail-list {
+  font-size: 14px;
+  color: #222;
+  text-align: left;
+  margin: 8px 0;
+  padding-left: 15px;
+}
+
+.mobile-deskripsi {
+  font-size: 14px;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/* TOMBOL DI TENGAH BAWAH */
+.mobile-btn-sewa {
+  display: inline-block;
+  background-color: #82cce3;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 40px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.mobile-btn-sewa:hover {
+  background-color: #1a0842;
+  color: #fff;
+}
+/* DETAIL SPOT */
+.detailmobilespot-body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #d9f2ec;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* WRAPPER */
+.detailmobilespot-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  max-width: 360px; 
+}
+
+/* KOTAK UTAMA */
+.detailmobilespot-card {
+  background-color: #e5e5e5;
+  border-radius: 20px;
+  padding: 20px 15px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* TEKS “LAPORKAN” DI POJOK KANAN ATAS */
+.detailmobilespot-lapor {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 12px;
+  color: #b1b1b1;
+}
+
+/* FOTO PRODUK */
+.detailmobilespot-image {
+  width: 180px; 
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+/* INFORMASI PRODUK */
+.detailmobilespot-info {
+  text-align: left; 
+  width: 100%;
+  color: #000;
+}
+
+.detailmobilespot-info h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a0842;
+  text-align: center; 
+  margin: 5px 0;
+}
+
+.detailmobilespot-rating {
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.detailmobilespot-info p {
+  font-size: 13.5px;
+  line-height: 1.4em;
+  margin: 3px 0;
+}
+
+/* DESKRIPSI */
+.detailmobilespot-deskripsi {
+  font-size: 13.5px;
+  color: #000;
+  text-align: left;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+/* TOMBOL */
+.detailmobilespot-btn {
+  display: block;
+  background-color: #82cce3;
+  color: #000;
+  font-weight: 600;
+  padding: 10px 0;
+  width: 80%;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 15px;
+  text-align: center;
+  transition: 0.3s ease;
+  margin: 0 auto;
+}
+
+.detailmobilespot-btn:hover {
+  background-color: #1a0842;
+  color: #fff;
+}
+
+/* 
+=================================
+         profile 
+==================================
+*/
+
+.profil-body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f6f9;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+/* HEADER PROFIL */
+.profil-header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.profil-bg {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(180deg, #a2e8e6, #e3f9f8);
+  border-bottom-left-radius: 50% 15%;
+  border-bottom-right-radius: 50% 15%;
+}
+
+/* BAGIAN TENGAH FOTO DAN NAMA */
+.profil-center {
+  position: relative;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.profil-foto {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.profil-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profil-btn-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* TEKS PROFIL */
+.profil-nama {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a0842;
+  margin: 10px 0 2px;
+}
+
+.profil-level {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+/* SECTION TITLE DAN BUTTON */
+.profil-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0 15px;
+}
+
+.profil-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a0842;
+}
+
+.profil-btn-secondary {
+  background-color: #007bff;
+  color: white;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profil-btn-secondary:hover {
+  background-color: #0056b3;
+}
+
+/* SCROLL CARD */
+.profil-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 0 40px 30px;
+  scroll-snap-type: x mandatory;
+  justify-content: center;
+}
+
+.profil-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.profil-scroll::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+/* KARTU LOKASI */
+.lokasi-card {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: #d9f2ec;
+  border-radius: 15px;
+  width: 250px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  scroll-snap-align: center;
+  border: 1px solid #ccc;
+  transition: transform 0.3s;
+}
+
+.lokasi-card:hover {
+  transform: translateY(-4px);
+}
+
+.lokasi-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+/* INFO DALAM KARTU */
+.lokasi-info {
+  text-align: left;
+}
+
+.lokasi-info p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a0842;
+}
+
+.lokasi-info span {
+  font-size: 13px;
+  color: #777;
+}
+
+.bintang {
+  color: #f4c542;
+  font-size: 14px;
+  margin-top: 5px;
+}
