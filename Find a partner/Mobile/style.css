@@ -1,0 +1,321 @@
+/* Variabel CSS untuk konsistensi */
+:root {
+    --bg-color-app: #e0f7fa; /* Warna latar belakang aplikasi (biru muda) */
+    --bg-color-body: #DFF2EB; /* Warna latar belakang di luar aplikasi (biru tua) */
+    --primary-text: #333;
+    --secondary-text: #666;
+    --line-color: #bdbdbd;
+    --highlight-bg: #f9f9e2; /* Warna latar belakang item list (kuning pucat) */
+    --rank-gold: #ffc107;
+    --rank-silver: #a0a0a0;
+    --rank-bronze: #8d6e63;
+}
+
+/* Reset dan Styling Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Font size dasar disetel lebih kecil untuk mobile */
+    font-size: 16px; 
+}
+
+body {
+    /* Set tinggi agar sesuai tinggi viewport mobile */
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Kontainer Utama Aplikasi (412x917) */
+.app-container {
+    width: 100vw; /* Ambil lebar penuh di perangkat mobile */
+    max-width: 450px; /* Batasan maksimum agar tidak terlalu lebar */
+    min-height: 100vh;
+    background-color: var(--bg-color-app);
+    padding: 0 16px 20px 16px; /* Padding samping */
+}
+
+/* --- Header --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px; /* Padding atas untuk simulasi status bar */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    flex-grow: 1;
+}
+
+.search-bar span {
+    font-size: 1.2rem;
+    color: var(--primary-text);
+    font-weight: 600;
+}
+
+.search-bar hr {
+    border: none;
+    height: 1px;
+    background-color: var(--line-color);
+    margin-top: 5px;
+}
+
+.icons i {
+    font-size: 1.2rem;
+    color: var(--secondary-text);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* --- Bagian Umum --- */
+.section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--primary-text);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- Bagian Temukan (Horizontal Scroll) --- */
+.user-list-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll; /* Kunci untuk scrolling horizontal */
+    padding-bottom: 10px;
+    /* Sembunyikan scrollbar di beberapa browser */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.user-list-scroll::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.user-card {
+    min-width: 100px; /* Lebar card diperkecil untuk mobile */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-card img {
+    width: 100%;
+    height: 120px; /* Tinggi gambar mobile */
+    object-fit: cover;
+    display: block;
+}
+
+.user-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info .name {
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--primary-text);
+}
+
+.user-info .level {
+    font-size: 0.7rem;
+    color: var(--secondary-text);
+}
+
+.user-badges {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+    gap: 3px;
+    background: transparent; /* Pastikan badge transparan agar sesuai gambar */
+}
+
+.user-badges i {
+    font-size: 0.7rem;
+    color: var(--primary-text);
+    background: none;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+
+/* --- Bagian Peringkat Tertinggi (Top 3) --- */
+.peringkat-top3 {
+    /* Gunakan grid 3 kolom dan 2 baris agar Peringkat 1 benar-benar di tengah atas */
+    display: grid;
+    /* 3 kolom: 1fr (kiri) | 1fr (tengah) | 1fr (kanan) */
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 10px 5px; /* Jarak vertikal dan horizontal */
+    align-items: flex-end; /* Semua card sejajar di bagian bawah grid */
+    justify-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Peringkat 1: Menempati kolom tengah di baris pertama */
+.rank-1 {
+    /* Mulai dari kolom 1 dan rentang hingga 3 (membuat 1 di tengah secara visual) */
+    grid-column: 1 / span 3; 
+    /* Gunakan margin negatif agar Peringkat 1 "melayang" sedikit di atas Peringkat 2 dan 3 */
+    margin-bottom: -50px; 
+    max-width: 140px; /* Batasi lebar agar tidak terlalu besar */
+    z-index: 5; /* Pastikan ia berada di atas (visual) */
+}
+
+/* Peringkat 2: Kolom 1 di baris kedua */
+.rank-2 {
+    grid-column: 1; 
+    max-width: 130px;
+}
+
+/* Peringkat 3: Kolom 3 di baris kedua */
+.rank-3 {
+    grid-column: 3;
+    max-width: 130px;
+}
+
+/* KOSONGKAN kolom tengah di baris kedua, agar Peringkat 2 dan 3 terpisah */
+/* Tidak perlu selector khusus, karena Peringkat 2 ada di kolom 1 dan 3 ada di kolom 3 */
+
+
+.top-user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 15px; 
+    width: 100%; 
+}
+
+.top-user-card img {
+    width: 100%;
+    /* Atur tinggi relatif terhadap rank-1, agar ada efek piramida */
+    height: 120px; 
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.rank-2 img {
+    height: 105px; /* Gambar Rank 2 lebih pendek */
+}
+
+.rank-3 img {
+    height: 90px; /* Gambar Rank 3 paling pendek */
+}
+
+
+.top-user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 15px; /* Ruang untuk angka peringkat */
+    width: 100%; /* Agar memenuhi grid cell */
+    max-width: 130px; /* Batas lebar gambar */
+}
+
+.top-user-card img {
+    width: 100%;
+    height: 120px; /* Tinggi gambar untuk Rank 1 */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.rank-2 img {
+    height: 100px; /* Gambar Rank 2 lebih pendek */
+}
+
+.rank-3 img {
+    height: 90px; /* Gambar Rank 3 paling pendek */
+}
+
+.rank-number {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+.rank-number.gold {
+    background-color: var(--rank-gold);
+}
+.rank-number.silver {
+    background-color: var(--rank-silver);
+}
+.rank-number.bronze {
+    background-color: var(--rank-bronze);
+}
+
+
+.top-user-card .name {
+    font-weight: bold;
+    color: var(--primary-text);
+    font-size: 0.9rem;
+}
+
+.top-user-card .activity {
+    font-size: 0.8rem;
+    color: var(--secondary-text);
+}
+
+/* --- Peringkat Lanjutan (List) --- */
+.peringkat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.peringkat-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: var(--highlight-bg);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.peringkat-item .rank-number {
+    font-weight: bold;
+    color: var(--secondary-text);
+    width: 25px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.peringkat-item img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.peringkat-item .name {
+    font-weight: 500;
+    color: var(--primary-text);
+    font-size: 1rem;
+}

@@ -1,0 +1,303 @@
+:root {
+    --bg-color: #DFF2EB;
+    --primary-text: #333;
+    --secondary-text: #666;
+    --line-color: #ccc;
+    --highlight-bg: #f5f5dc;
+    --rank-gold: #ffd700;
+    --rank-silver: #c0c0c0;
+    --rank-bronze: #cd7f32;
+}
+
+/* Reset dan styling dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Alana', sans-serif;
+}
+
+.app-container {
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Header --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.search-bar {
+    flex-grow: 1;
+}
+
+.search-bar span {
+    font-size: 20px;
+    color: var(--primary-text);
+    font-weight: 500;
+}
+
+.search-bar hr {
+    border: none;
+    height: 1px;
+    background-color: var(--line-color);
+    margin-top: 5px;
+}
+
+.icons i {
+    font-size: 22px;
+    color: var(--secondary-text);
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* --- Bagian Umum --- */
+.section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--primary-text);
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- Bagian Temukan --- */
+.temukan-container {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;
+    gap: 10px;
+}
+
+.user-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Untuk memastikan card bisa di-scroll jika lebih dari 3 */
+    padding: 10px 0;
+}
+
+.user-card {
+    min-width: 180px; /* Lebar card */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.user-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.user-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info .name {
+    font-weight: bold;
+    color: var(--primary-text);
+}
+
+.user-info .level {
+    font-size: 12px;
+    color: var(--secondary-text);
+}
+
+.user-badges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.user-badges i {
+    font-size: 14px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.arrow-btn {
+    background: none;
+    border: 1px solid var(--line-color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--secondary-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.arrow-btn:hover {
+    background-color: var(--line-color);
+}
+
+/* --- Bagian Peringkat Tertinggi (Top 3) --- */
+.peringkat-top3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 kolom dengan lebar sama */
+    gap: 20px;
+    align-items: flex-end; /* Memastikan semua card sejajar di bagian bawah */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.top-user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    position: relative;
+}
+
+.top-user-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.top-user-card .rank-number {
+    position: absolute;
+    top: 0;
+    /* Penempatan disesuaikan agar tepat di atas gambar */
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    z-index: 10;
+}
+
+/* Styling Khusus Top 3 */
+.rank-1 {
+    order: 2; /* Peringkat 1 di tengah */
+}
+.rank-1 .rank-number {
+    background-color: var(--rank-gold);
+    border: 3px solid var(--rank-gold);
+}
+
+.rank-2 {
+    order: 1; /* Peringkat 2 di kiri */
+}
+.rank-2 .rank-number {
+    background-color: var(--rank-silver);
+    border: 3px solid var(--rank-silver);
+}
+.rank-2 img {
+    height: 180px; /* Sedikit lebih pendek dari rank 1 */
+}
+
+.rank-3 {
+    order: 3; /* Peringkat 3 di kanan */
+}
+.rank-3 .rank-number {
+    background-color: var(--rank-bronze);
+    border: 3px solid var(--rank-bronze);
+}
+.rank-3 img {
+    height: 160px; /* Sedikit lebih pendek dari rank 2 */
+}
+
+
+.top-user-card .name {
+    font-weight: bold;
+    color: var(--primary-text);
+    font-size: 16px;
+}
+
+.top-user-card .activity {
+    font-size: 14px;
+    color: var(--secondary-text);
+}
+
+/* --- Peringkat Lanjutan (List) --- */
+.peringkat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.peringkat-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--highlight-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.peringkat-item .rank-number {
+    font-weight: bold;
+    color: var(--secondary-text);
+    width: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.peringkat-item img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.peringkat-item .name {
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+/* Warna latar belakang spesifik untuk item list yang berbeda */
+.rank-4 {
+    background-color: #f7f7e9;
+}
+.rank-5 {
+    background-color: #fcfceb;
+}
+.rank-6 {
+    background-color: #fefef5;
+}
+
+/* Responsif untuk layar lebih kecil (tablet/mobile), meskipun permintaan awal untuk desktop */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 15px 20px;
+    }
+
+    .peringkat-top3 {
+        grid-template-columns: 1fr; /* Satu kolom untuk mobile */
+        gap: 40px;
+    }
+
+    .rank-1, .rank-2, .rank-3 {
+        order: initial; /* Urutan kembali normal 1, 2, 3 */
+    }
+}
