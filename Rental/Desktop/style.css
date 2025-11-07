@@ -1,0 +1,717 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alata", sans-serif;
+}
+
+body {
+  background-color: #DFF2EB;
+  color: #333;
+}
+
+/* Navbar */
+/* Wrapper utama navbar */
+.navbar {
+  display: flex;
+  align-items: center;         /* sejajarkan vertikal */
+  justify-content: space-between; /* bagi ruang antar bagian */
+  padding: 0 40px;
+  background-color: #7AB2D3;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  margin-left: -20px; /* geser logo sedikit ke kiri */
+}
+
+/* Logo */
+.logo img {
+  width: 117px;
+  height:116px;
+  object-fit: contain;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #000000;
+  margin: 0 5px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Efek underline saat hover */
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #333A73;
+  transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(199, 199, 199, 0.5); /* garis juga setengah transparan */
+  border-radius: 30px;
+  background-color: rgba(199, 199, 199, 0.5); /* warna abu setengah transparan */
+  padding-left: 10px;
+  width: 508px;
+  height: 50px;
+}
+
+.search-container input {
+  border: none;
+  background: transparent;
+  color: #000;
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-container input::placeholder {
+  color: #000000;
+}
+
+.search-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.search-button:hover .search-icon {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+/* Tombol Login dan Register */
+.auth-buttons {             /* untuk memposisikan ikon di dalam input */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 40px;
+}
+
+.login, .register {
+  background: #333A73;
+  color: white;
+  border: 1px solid #333A73;
+  border-radius: 30px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login:hover,
+.register:hover {
+  background: #2a2f63;
+}
+
+.kategori-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 22px; /* jarak antar baris */
+  padding: 50px 100px;
+  background-color: #eef6f3; /* opsional */
+}
+
+.kategori-upwrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 19px; /* jarak antar baris */
+  background-color: #eef6f3; /* opsional */
+}
+
+.kategori-downwrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 19px; /* jarak antar baris */
+  background-color: #eef6f3; /* opsional */
+}
+
+.kategori-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 19px; /* jarak antar item dalam baris */
+}
+
+.kategori-uprow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* jarak antar item dalam baris */
+}
+
+.kategori-downrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* jarak antar item dalam baris */
+}
+
+.kategori-item-1 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  cursor: pointer;
+  color: #fff; /* warna teks */
+  font-weight: 600;
+  text-align: center;
+}
+
+.kategori-item-1 img {
+  width: 295px;
+  height: 234px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+/* Tombol PESAN */
+.kategori-item-1 .pesan-btn {
+  position: absolute;
+  top: 77%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(217, 217, 217, 0.3); /* 30% transparan */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 3;
+}
+
+.kategori-item-1 .pesan-btn:hover {
+  background-color: #aeadad; /* sedikit lebih gelap saat hover */
+}
+
+.kategori-item-2 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  cursor: pointer;
+  color: #fff; /* warna teks */
+  font-weight: 600;
+  text-align: center;
+}
+
+.kategori-item-2 img {
+  width: 295px;
+  height: 234px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+/* Tombol PESAN */
+.kategori-item-2 .pesan-btn {
+  position: absolute;
+  top: 57%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(217, 217, 217, 0.3); /* 30% transparan */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 3;
+}
+
+.kategori-item-2 .pesan-btn:hover {
+  background-color: #aeadad; /* sedikit lebih gelap saat hover */
+}
+
+.kategori-item-3 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  cursor: pointer;
+  color: #fff; /* warna teks */
+  font-weight: 600;
+  text-align: center;
+}
+
+.kategori-item-3 img {
+  width: 610px;
+  height: 231px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+/* Tombol PESAN */
+.kategori-item-3 .pesan-btn {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(217, 217, 217, 0.3); /* 30% transparan */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 3;
+}
+
+.kategori-item-3 .pesan-btn:hover {
+  background-color: #aeadad; /* sedikit lebih gelap saat hover */
+}
+
+.kategori-item-4 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  cursor: pointer;
+  color: #fff; /* warna teks */
+  font-weight: 600;
+  text-align: center;
+}
+
+.kategori-item-4 img {
+  width: 610px;
+  height: 231px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+/* Tombol PESAN */
+.kategori-item-4 .pesan-btn {
+  position: absolute;
+  top: 55%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(217, 217, 217, 0.3); /* 30% transparan */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 3;
+}
+
+.kategori-item-4 .pesan-btn:hover {
+  background-color: #aeadad; /* sedikit lebih gelap saat hover */
+}
+
+.kategori-item-5 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  cursor: pointer;
+  color: #fff; /* warna teks */
+  font-weight: 600;
+  text-align: center;
+}
+
+.kategori-item-5 img {
+  width: 295px;
+  height: 234px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+/* Tombol PESAN */
+.kategori-item-5 .pesan-btn {
+  position: absolute;
+  top: 85%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(217, 217, 217, 0.3); /* 30% transparan */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 3;
+}
+
+.kategori-item-5 .pesan-btn:hover {
+  background-color: #aeadad; /* sedikit lebih gelap saat hover */
+}
+
+.kategori-item-6 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  cursor: pointer;
+  color: #fff; /* warna teks */
+  font-weight: 600;
+  text-align: center;
+}
+
+.kategori-item-6 img {
+  width: 295px;
+  height: 234px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+/* Tombol PESAN */
+.kategori-item-6 .pesan-btn {
+  position: absolute;
+  top: 86%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(217, 217, 217, 0.3); /* 30% transparan */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 3;
+}
+
+.kategori-item-6 .pesan-btn:hover {
+  background-color: #aeadad; /* sedikit lebih gelap saat hover */
+}
+
+.kategori-item-1::before {
+  content: "PANCINGAN";
+  position: absolute;
+  top: 45%; /* sedikit di atas tengah */
+  left: 34%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Deskripsi di bawah judul */
+.kategori-item-1::after {
+  content: "Alat utama untuk menangkap ikan dengan presisi dan kekuatan.";
+  position: absolute;
+  top: 60%; /* di bawah judul */
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  width: 80%;
+  line-height: 1.3;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Pastikan teks tetap terlihat di atas gambar */
+.kategori-item-1::before,
+.kategori-item-1::after {
+  pointer-events: none; /* biar hover gak ganggu teks */
+}
+
+.kategori-item-2::before {
+  content: "KUMPARAN";
+  position: absolute;
+  top: 25%; /* sedikit di atas tengah */
+  left: 34%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Deskripsi di bawah judul */
+.kategori-item-2::after {
+  content: "Fungsinya menggulung dan mengatur panjang dawai.";
+  position: absolute;
+  top: 40%; /* di bawah judul */
+  left: 43%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  width: 80%;
+  line-height: 1.3;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Pastikan teks tetap terlihat di atas gambar */
+.kategori-item-2::before,
+.kategori-item-2::after {
+  pointer-events: none; /* biar hover gak ganggu teks */
+}
+
+.kategori-item-3::before {
+  content: "UMPAN IKAN";
+  position: absolute;
+  top: 20%; /* sedikit di atas tengah */
+  left: 17%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Deskripsi di bawah judul */
+.kategori-item-3::after {
+  content: "Umpan buatan yang meniru gerakan ikan kecil untuk menarik perhatian.";
+  position: absolute;
+  top: 33%; /* di bawah judul */
+  left: 18%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  width: 35%;
+  line-height: 1.3;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 1;
+  white-space: normal;
+}
+
+/* Pastikan teks tetap terlihat di atas gambar */
+.kategori-item-3::before,
+.kategori-item-3::after {
+  pointer-events: none; /* biar hover gak ganggu teks */
+}
+
+.kategori-item-4::before {
+  content: "KOTAK PERLENGKAPAN";
+  position: absolute;
+  top: 23%; /* sedikit di atas tengah */
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  width: 50%;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Deskripsi di bawah judul */
+.kategori-item-4::after {
+  content: "Tempat menyimpan umpan, kail, dan aksesoris memancing agar rapi dan siap pakai.";
+  position: absolute;
+  top: 37%; /* di bawah judul */
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  width: 50%;
+  line-height: 1.3;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Pastikan teks tetap terlihat di atas gambar */
+.kategori-item-4::before,
+.kategori-item-4::after {
+  pointer-events: none; /* biar hover gak ganggu teks */
+}
+
+.kategori-item-5::before {
+  content: "PERLENGKAPAN KESELAMATAN";
+  position: absolute;
+  top: 60%; /* sedikit di atas tengah */
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  width: 100%;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Deskripsi di bawah judul */
+.kategori-item-5::after {
+  content: "Satu set perlindungan berisi rompi pelampung, sarung tangan, dan helm ringan";
+  position: absolute;
+  top: 70%; /* di bawah judul */
+  left: 55%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+  width: 83%;
+  line-height: 1.3;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Pastikan teks tetap terlihat di atas gambar */
+.kategori-item-5::before,
+.kategori-item-5::after {
+  pointer-events: none; /* biar hover gak ganggu teks */
+}
+
+.kategori-item-6::before {
+  content: "KEBUTUHAN LAINNYA";
+  position: absolute;
+  top: 65%; /* sedikit di atas tengah */
+  left: 70%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Pastikan teks tetap terlihat di atas gambar */
+.kategori-item-6::before{
+  pointer-events: none; /* biar hover gak ganggu teks */
+}
+
+/* Produk */
+.produk {
+  text-align: center;
+  padding: 40px 60px;
+}
+
+.produk h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #000000;
+}
+
+.produk-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.produk-item {
+  width: 170px;
+  gap: 30px;
+  text-align: center;
+}
+
+.produk-item img {
+  width: 143px;
+  height: 143px;
+  object-fit: contain;
+}
+
+.produk-item p {
+  font-size: 24px;
+  margin: 8px 0;
+  font-weight: 500;
+  width: 115%;
+}
+
+.produk-item3 {
+  width: 170px;
+  gap: 30px;
+  text-align: center;
+}
+
+.produk-item3 img {
+  width: 143px;
+  height: 143px;
+  object-fit: contain;
+}
+
+.produk-item3 p {
+  font-size: 24px;
+  margin: 24px 0;
+  font-weight: 500;
+  width: 115%;
+}
+
+.rating {
+  color: #ffa500;
+  margin: 8px 0;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: row; /* biar panah di sebelah kiri harga */
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  padding: 3px 10px;
+  background-color: #0046FF;
+  box-sizing: content-box;
+  object-fit: contain;
+  transition: background-color 0.3s ease; /* efek halus */
+  cursor: pointer;
+}
+
+.arrow-icon:hover {
+  background-color: #1E90FF; /* warna saat di-hover, bisa kamu ubah sesuka */
+}
+
+.produk-item .price-container .arrow-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.produk-item3 .price-container .arrow-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.price {
+  background-color: #0C2B4E;
+  color: white;
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 13px;
+}
