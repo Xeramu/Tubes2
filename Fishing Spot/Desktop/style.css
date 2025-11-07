@@ -1,0 +1,194 @@
+/* Font */
+body {
+  font-family: 'Alata', sans-serif;
+  margin: 0;
+  background-color: #edf2f0;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #7AB2D3;
+  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+header nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none; /* default tanpa underline */
+  margin: 0 10px;
+  transition: all 0.3s ease; /* efek smooth */
+}
+
+header nav a:hover {
+  text-decoration: underline; /* muncul underline saat hover */
+}
+
+header .auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .auth input {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+header .btn-login, header .btn-daftar {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* efek smooth */
+}
+
+header .btn-login {
+  background-color: #333A73;
+  color: white;
+}
+
+header .btn-login:hover {
+  background-color: #1f2455; /* warna gelap saat hover */
+}
+
+header .btn-daftar {
+  background-color: #d9d9d9;
+  color: #333;
+}
+
+header .btn-daftar:hover {
+  background-color: #bfbfbf; /* warna sedikit lebih gelap saat hover */
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(199, 199, 199, 0.5); /* garis juga setengah transparan */
+  border-radius: 30px;
+  background-color: rgba(199, 199, 199, 0.5); /* warna abu setengah transparan */
+  padding-left: 10px;
+  width: 508px;
+  height: 50px;
+}
+
+.search-container input {
+  border: none;
+  background: transparent;
+  color: #000;
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-container input::placeholder {
+  color: #000000;
+}
+
+.search-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.search-button:hover .search-icon {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+/* Tombol Login dan Register */
+.auth-buttons {             /* untuk memposisikan ikon di dalam input */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 40px;
+}
+
+/* Kategori */
+.kategori {
+  display: flex;
+  justify-content: start;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.kategori button {
+  padding: 10px 76px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.kategori button.active {
+  background-color: #7AB2D3;
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+/* Destinasi cards */
+.destinasi-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
+}
+
+.destinasi-card {
+  position: relative; /* agar teks bisa overlay di dalam kartu */
+  width: 195px;
+  height: 270px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.destinasi-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+/* Overlay teks */
+.destinasi-card .info {
+  position: absolute;
+  bottom: 0;           /* teks di bagian bawah gambar */
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0,0,0,0.4); /* latar semi-transparan agar teks terlihat */
+  color: white;         /* teks putih */
+  box-sizing: border-box;
+}
+
+.destinasi-card .info h3 {
+  margin: 0;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.destinasi-card .info p {
+  margin: 2px 0;
+  font-size: 0.9em;
+}

@@ -1,0 +1,158 @@
+
+    /* Reset dan font dasar */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Alata, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      padding: 5px;
+    }
+
+    /* Search bar */
+    .search-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* jika ada icon + input */
+      background-color: rgba(199, 199, 199, 0.5);
+      border: 1px solid #C7C7C7;
+      border-radius: 30px;
+      padding: 0 10px;
+      width: 90%;        /* bisa disesuaikan */
+      max-width: 500px;
+      height: 45px;
+      margin: 20px auto 0 auto; /* top 20px, horizontal center */
+      box-sizing: border-box;
+    }
+
+.search-container input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-container input::placeholder {
+  color: #000000;
+  opacity: 1; /* pastikan tidak transparan */
+}
+
+.search-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.search-button:hover .search-icon {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+    /* Kategori */
+    .categories {
+      display: flex;
+      margin-bottom: 20px;
+      margin-top: 20px; /* geser ke bawah */
+    }
+
+
+    .categories button {
+      flex: 1;
+      padding: 8px 0;
+      border: none;
+      background-color: #e0e0e0;
+      color: #333;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .categories button.active {
+      background-color: #7AB2D3;
+      color: #000000;
+    }
+
+    /* Spot list grid */
+    .spot-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .spot-card {
+      position: relative;
+      width: 195px;       /* lebar 120px */
+      height: 270px;      /* tinggi 120px */
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .spot-card img {
+      width: 195px;
+      height: 270px;
+      object-fit: cover;
+    }
+
+    /* Overlay info */
+    .spot-info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 6px 8px;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .spot-info .name {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+
+    .spot-info .location {
+      font-size: 11px;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .spot-info .location img {
+      width: 12px;
+      height: 12px;
+    }
+
+    .spot-info .price {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      background-color: rgba(0,0,0,0.6);
+      padding: 2px 6px;
+      border-radius: 8px;
+      font-size: 10px;
+    }
+
+    @media (max-width: 480px) {
+      .spot-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .spot-card img {
+        height: 270px;
+      }
+    }
