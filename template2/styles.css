@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0066ff;
+  --primary-dark: #004acc;
+  --accent-color: #00d9ff;
+  --text-dark: #1a1a1a;
+  --text-light: #666666;
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --border-color: #e0e6f0;
+  --shadow: 0 4px 20px rgba(0, 102, 255, 0.1);
+  --shadow-hover: 0 12px 40px rgba(0, 102, 255, 0.2);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* HEADER STYLES */
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logo h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.header-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-login {
+  background-color: #ffd93d;
+  color: #333;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #ffc300;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 217, 61, 0.3);
+}
+
+.btn-user {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-user:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* MAIN CONTENT */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 1.5rem;
+  color: white;
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* MENU SECTION */
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.menu-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Enhanced card design with gradient borders and better hover effects */
+.menu-card {
+  background-color: var(--bg-white);
+  border: 2px solid #e8e8e8;
+  border-radius: 1.2rem;
+  padding: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--card-color);
+  transition: height 0.3s ease;
+}
+
+.menu-card:hover::before {
+  height: 8px;
+}
+
+.menu-card:hover {
+  border-color: var(--card-color);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-10px);
+  background: linear-gradient(135deg, var(--bg-white) 0%, rgba(102, 126, 234, 0.05) 100%);
+}
+
+.card-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .card-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.menu-card h3 {
+  font-size: 1.35rem;
+  color: var(--card-color);
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.menu-card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.card-arrow {
+  font-size: 1.5rem;
+  color: var(--card-color);
+  opacity: 0;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.menu-card:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* FOOTER */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .navbar {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .menu-card {
+    padding: 2rem;
+    min-height: 260px;
+  }
+
+  .card-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+
+  .navbar {
+    gap: 0.5rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .menu-card {
+    padding: 1.5rem;
+    min-height: 220px;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .menu-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .menu-card p {
+    font-size: 0.85rem;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+}
