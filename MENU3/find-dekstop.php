@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Teman</title>
+    <link rel="stylesheet" href="css/style-find-deks.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="search-bar">
+                <span>Cari Teman</span>
+                <hr>
+            </div>
+            <div class="icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-bell"></i>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>Temukan</h2>
+            <div class="temukan-container">
+                <button class="arrow-btn left-arrow"><i class="fas fa-arrow-left"></i></button>
+                <div class="user-list">
+                    <div class="user-card">
+                        <img src="images/june.png" alt="June">
+                        <div class="user-info">
+                            <span class="name">June</span>
+                            <span class="level">Menengah</span>
+                        </div>
+                        <div class="user-badges">
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                    </div>
+                    <div class="user-card">
+                        <img src="images/juan.png" alt="Juan">
+                        <div class="user-info">
+                            <span class="name">Juan</span>
+                            <span class="level">Pemula</span>
+                        </div>
+                        <div class="user-badges">
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                    </div>
+                    <div class="user-card">
+                        <img src="images/toto.png" alt="Toto">
+                        <div class="user-info">
+                            <span class="name">Toto</span>
+                            <span class="level">Mahir</span>
+                        </div>
+                        <div class="user-badges">
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+                <button class="arrow-btn right-arrow"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <section class="section peringkat-section">
+            <h2>Peringkat Tertinggi</h2>
+            <div class="peringkat-top3">
+                <div class="top-user-card rank-2">
+                    <span class="rank-number">2</span>
+                    <img src="images/rahmat.png" alt="Rahmat">
+                    <span class="name">Rahmat</span>
+                    <span class="activity">Dewa Mancing</span>
+                </div>
+                <div class="top-user-card rank-1">
+                    <span class="rank-number">1</span>
+                    <img src="images/budi.png" alt="Budi">
+                    <span class="name">Budi</span>
+                    <span class="activity">Dewa Mancing</span>
+                </div>
+                <div class="top-user-card rank-3">
+                    <span class="rank-number">3</span>
+                    <img src="images/ridwan.png" alt="Ridwan">
+                    <span class="name">Ridwan</span>
+                    <span class="activity">Mahir</span>
+                </div>
+            </div>
+
+            <div class="peringkat-list">
+                <div class="peringkat-item rank-4">
+                    <span class="rank-number">4</span>
+                    <img src="images/joko.png" alt="Joko">
+                    <span class="name">Joko</span>
+                </div>
+                <div class="peringkat-item rank-5">
+                    <span class="rank-number">5</span>
+                    <img src="images/bahri.png" alt="Bahri">
+                    <span class="name">Bahri</span>
+                </div>
+                <div class="peringkat-item rank-6">
+                    <span class="rank-number">6</span>
+                    <img src="images/suryana.png" alt="Suryana">
+                    <span class="name">Suryana</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
