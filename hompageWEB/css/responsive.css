@@ -1,0 +1,579 @@
+body {
+  font-family: Host Grotesk;
+  background-color: #dff2eb;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 481px) {
+  .header-wrap {
+    display: flex !important; /* Navbar desktop tetap muncul */
+  }
+  .header-wrap-mobile,
+  .mobile-sidebar,
+  .sidebar-overlay {
+    display: none !important;
+  }
+}
+
+/* Mobile 480px and below */
+@media (max-width: 480px) {
+  .header-wrap {
+    display: none;
+  }
+
+  /* HEADER MOBILE */
+.header-wrap-mobile {
+  position: fixed;
+  top: 0;
+  background-color: #dff2eb;
+  padding: 28px 32px 25px 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  z-index: 999;
+}
+
+.header-left-search {
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+}
+
+.input-search-home {
+  width: 170px;
+  background-color: #c7c7c7;
+  border-radius: 30px;
+  border: 0;
+  padding: 7px 60px 7px 20px;
+  font-family: "Host Grotesk";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 2;
+  background-image: url("../images/search.png");
+  background-repeat: no-repeat;
+  background-size: 13px;
+  background-position: right 15px center;
+}
+
+.input-search-home:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.btn-link-home {
+  background-color: #333a73;
+  padding: 10px 8px;
+  width: 56px;
+  border-radius: 30px;
+  font-family: "Host Grotesk";
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* BUTTON MENU IMAGE */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  left: 50px;
+  top: 200px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.menu-toggle img {
+  width: 28px;
+  height: auto;
+}
+
+/* SIDEBAR */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 270px;
+  height: 100%;
+  background-color: #4a628a;
+  padding: 80px 20px;
+  transition: 0.3s ease;
+  z-index: 1001;
+}
+
+.mobile-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-sidebar li {
+  margin: 20px 0;
+}
+.mobile-sidebar a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  font-family: "Host Grotesk";
+  font-weight: 600;
+}
+
+.close-menu {
+  position: absolute;
+  top: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.close-menu img {
+  width: 26px;
+}
+
+/* OVERLAY */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  z-index: 1000;
+}
+
+
+/* ✅ RESPONSIVE MOBILE ONLY */
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ✅ DESKTOP JANGAN MUNCUL SIDEBAR */
+@media (min-width: 1024px) {
+  .mobile-sidebar,
+  .sidebar-overlay,
+  .menu-toggle,
+  .header-wrap-mobile {
+    display: none !important;
+  }
+}
+
+
+  
+
+  .hero-content {
+    top: 15%;     
+    left: 34%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    padding: 0 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 15px;        
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .btn-primary {
+    padding: 8px 8px;
+    font-size: 8px;        
+    border-radius: 20px;
+    background: #ffffff66;
+  }
+
+  .btn-primary:hover {
+    background: #ffffff99;
+  }
+
+  /* Hero section mobile styles */
+  .home-wrapper {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .container {
+    padding: 85px 32px 0 90px;
+    width: 100%;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-wrapper {
+    padding-top: 0;
+  }
+
+  .hero-image {
+    width: 330px;
+    height: 167px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .hero-search-card {
+    display: none;
+  }
+
+  /* Informed section mobile styles */
+  
+  .informed-desc {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    padding: 40px 90px;
+    width: 300px;
+  }
+
+  .informed-desc h1 {
+    font-size: 18px;
+    font-weight: 500;
+    
+  }
+
+  .informed-desc span {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .informed-content-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  .informed-left-content,
+  .informed-middle-content,
+  .informed-right-content {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .informed-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .informed-img img {
+    width: 191px;
+    height: 127px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .informed-left-content p,
+  .informed-middle-content p,
+  .informed-right-content p {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Host Grotesk";
+    width: 300px;
+  }
+
+  /* Tutorial section mobile styles */
+  .tutorial-section {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 90px;
+    width: 300px;
+  }
+
+  .tutorial-desc h1 {
+    text-align: left;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 18px;
+  }
+
+  .tutorial-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    background-color: #dff2eb;
+  }
+
+  .tutorial-left {
+    display: flex;
+    justify-content: center;
+    order: 2;
+  }
+
+   .tutorial-left img{
+    display: none;
+   }
+
+   .tutorial-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    order: 1;
+  } 
+
+  .tutorial-right-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #dde3e1;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 1px 4px #00000012;
+  } 
+
+  .icon-wrap img {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .text-wrap h3 {
+    font-size: 14px;
+    margin: 0 0 6px;
+    font-weight: 600;
+  }
+
+  .text-wrap p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  /* Testimoni section mobile styles */
+  .testimoni-section {
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .testimoni-section h2 {
+    font-size: 20px;
+    margin-bottom: 70px;
+    font-family: "Host Grotesk";
+    font-weight: 700;
+    color: #000;
+  }
+
+  .testimoni-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+  }
+
+  .testimoni-card {
+    background: #aed6f1;
+    border-radius: 12px;
+    padding: 50px 15px 20px;
+    position: relative;
+    font-family: "Host Grotesk";
+  }
+
+  .testimoni-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .testimoni-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .testimoni-card h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .testimoni-card h4 {
+    margin: 5px 0 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .testimoni-card p {
+    font-size: 13px;
+    color: #000;
+    line-height: 1.3;
+  }
+
+  /* Footer mobile styles */
+  .footer {
+    background: #4a628a;
+    color: #cdd7e3;
+    padding: 30px 15px;
+    font-family: sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-logo {
+    width: 80px;
+    height: auto;
+  }
+
+  .footer-brand-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #cdd7e3;
+  }
+
+  .footer-left p {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+
+  .footer h4 {
+    font-size: 16px;
+    font-family: "Host Grotesk";
+    margin: 10px 0 8px 0;
+  }
+
+  .footer p {
+    font-size: 14px;
+    font-family: "Host Grotesk";
+    margin: 5px 0;
+  }
+
+  .footer-social {
+    display: flex;
+    padding-top: 10px;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .footer-social a {
+    width: 36px;
+    height: 36px;
+    background: #cdd7e3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-social a img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+
+  .footer-line {
+    margin-top: 20px;
+    background: #000000;
+    height: 1px;
+  }
+
+  .footer-copy {
+    text-align: center;
+    opacity: 0.9;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+}
+
+/* Tablet 768px */
+@media (max-width: 768px) and (min-width: 481px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .hero-image {
+    height: 350px;
+  }
+
+  .hero-search-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .informed-content-wrap {
+    grid-template-columns: 1fr;
+    padding: 10px 20px 0 20px;
+  }
+
+  .informed-middle-content p,
+  .informed-left-content p,
+  .informed-right-content p {
+    width: 100%;
+  }
+
+  .tutorial-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 20px 0 20px;
+  }
+
+  .tutorial-left img {
+    width: 100%;
+  }
+
+  .testimoni-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
